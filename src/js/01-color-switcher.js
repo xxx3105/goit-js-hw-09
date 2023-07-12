@@ -14,8 +14,11 @@ return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
     
 
 startBtn.addEventListener('click', () => {
-    callChanger = setInterval(colorChanger, 1000); 
-   stopBtn.disabled = false;
+  if (!callChanger) {
+    callChanger = setInterval(colorChanger, 1000);
+    startBtn.disabled = true;
+    stopBtn.disabled = false;
+  }
 });
 
 stopBtn.addEventListener('click', () => {
