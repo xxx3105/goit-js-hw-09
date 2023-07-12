@@ -24,6 +24,4 @@ clearInterval(callChanger);
     
 });
 
-
-//   btns.start.setAttribute("disabled", "true");
-//     btns.stop.removeAttribute("disabled", "true");
+ 
